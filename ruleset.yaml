@@ -1,0 +1,28 @@
+extends: ["spectral:oas"]
+rules:
+  no-fixme-placeholder-in-title:
+    description: "API title must not contain the word 'fixme'."
+    severity: error
+    given: "$.info.title"
+    then:
+      function: pattern
+      functionOptions:
+        match: "^(?!.*fixme).*$"
+  must-have-info-description:
+    message: Missing description
+    description: Must contain a short API description
+    severity: error
+    given: $.info
+    then:
+      field: description
+      function: truthy
+  path-must-be-kebab-case:
+    message: " {{property}} must be in kebab-case"
+    description: Paths must be in kebab-case
+    type: style
+    severity: error
+    given: $.paths[*]~
+    then:
+      function: pattern
+      functionOptions:
+        match: "^(\/|[a-z0-9-.]+|{[a-zA-Z0-9]+})+$"

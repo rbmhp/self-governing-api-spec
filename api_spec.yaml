@@ -1,0 +1,11 @@
+openapi: "3.0.0"
+info:
+  title: "fixme API"
+  version: "1.0.0"
+paths:
+  /exampleEndpoint:
+    get:
+      summary: "Example endpoint"
+      responses:
+        '200':
+          description: "Successful response"
