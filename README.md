@@ -14,7 +14,7 @@ This PoC leverages a large language models (LLMs) in combination with sophistica
 
 Below is a simplified flow diagram of the process:
 
-![Flow Diagram](flow_diagram.PNG)
+![Flow Diagram](flowdiagram.PNG)
 
 
 ## Setup & Usage
