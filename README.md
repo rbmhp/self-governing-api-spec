@@ -8,7 +8,7 @@ This PoC leverages a large language models (LLMs) in combination with sophistica
 
 - **Input:** Takes an OAS API specification and a corresponding ruleset 
 - **Validation:** Uses Spectral to validate the API specification against the ruleset
-- **Feedback Loop:** If the specification fails validation, error messages are sent to an LLM (via OpenRouter) which returns a corrected version
+- **Feedback Loop:** If the specification fails validation, error messages, spec and ruleset are sent to an LLM (via OpenRouter) which returns a corrected version
 - **Logging:** Once the specification finally passes validation, a diff between the original and final specification is generated and saved as a changelog
 - **Output:** The final, validated API specification is saved to a file
 
